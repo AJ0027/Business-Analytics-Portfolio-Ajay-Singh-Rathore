@@ -1,0 +1,73 @@
+from openpyxl import load_workbook
+import pandas as pd
+import math
+
+# Load the workbook and sheet
+file_path = "sagatave_eksamenam.xlsx"
+wb = load_workbook(file_path)
+ws = wb["Lapa_0"]
+
+# Step 1: Extract actual column headers from row 3
+true_headers = [cell.value for cell in ws[3]]
+
+# Step 2: Extract data from row 4 onward
+data = []
+for row in ws.iter_rows(min_row=4, values_only=True):
+    if any(cell is not None for cell in row):
+        data.append(row)
+
+# Step 3: Create DataFrame
+df = pd.DataFrame(data, columns=true_headers)
+
+# Step 4: Clean and convert data
+df["Dati"] = pd.to_datetime(df["Dati"], errors="coerce")
+df["Piegādes datums"] = pd.to_datetime(df["Piegādes datums"], errors="coerce")
+df["Cena"] = pd.to_numeric(df["Cena"], errors="coerce")
+df["Skaits"] = pd.to_numeric(df["Skaits"], errors="coerce")
+df["Piegādes cena"] = pd.to_numeric(df["Piegādes cena"], errors="coerce")
+
+# ------------------- Task 1 -------------------
+# Count rows where address starts with "Ain" and Skaits < 40
+task1 = df[
+    df["Adrese"].astype(str).str.startswith("Ain") & 
+    (df["Skaits"] < 40)
+].shape[0]
+
+print("Task 1 Answer:", task1)
+
+# ------------------- Task 2 -------------------
+# Count where Prioritāte is "High" and Piegādes datums is in 2015
+task2 = df[
+    (df["Prioritāte"].str.strip().str.lower() == "high") &
+    (df["Piegādes datums"].dt.year == 2015)
+].shape[0]
+
+print("Task 2 Answer:", task2)
+
+# ------------------- Task 3 -------------------
+# Count Adulienas iela in Valmiera or Saulkrasti
+task3 = df[
+    (df["Adrese"].str.contains("Adulienas iela", na=False)) &
+    (df["Pilsēta"].isin(["Valmiera", "Saulkrasti"]))
+].shape[0]
+
+print("Task 3 Answer:", task3)
+
+# ------------------- Task 4 -------------------
+# Avg Cena for LaserJet products (rounded down)
+laserjet_prices = df[df["Produkts"].str.contains("LaserJet", case=False, na=False)]["Cena"]
+task4 = math.floor(laserjet_prices.mean())
+
+print("Task 4 Answer:", task4)
+
+# ------------------- Task 5 -------------------
+# Total sum (Cena × Skaits + Piegādes cena) for Korporatīvais clients with 40 <= Skaits <= 50
+filtered_df = df[
+    (df["Klients"].str.strip() == "Korporatīvais") &
+    (df["Skaits"].between(40, 50, inclusive="both"))
+]
+
+total_series = filtered_df["Cena"] * filtered_df["Skaits"] + filtered_df["Piegādes cena"]
+task5 = math.floor(total_series.sum())
+
+print("Task 5 Answer:", task5)
