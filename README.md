@@ -25,7 +25,7 @@ Python script to analyze structured Excel datasets (clients, prices, delivery).
 
 ---
 
-## 🛠️ Tools & Skills
+##  Tools & Skills
 - **Power BI:** Dashboard design, DAX, storytelling  
 - **Excel:** Power Query, Macros, process optimization  
 - **Python:** openpyxl, pandas, datetime, automation scripts  
@@ -33,6 +33,6 @@ Python script to analyze structured Excel datasets (clients, prices, delivery).
 
 ---
 
-📫 **Connect with me:**  
+ **Connect with me:**  
 [LinkedIn](https://www.linkedin.com/in/ajay-singh-rathore-248a42266)  
 📧 asrathore2726@gmail.com
