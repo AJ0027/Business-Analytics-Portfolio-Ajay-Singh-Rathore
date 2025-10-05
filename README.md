@@ -11,13 +11,13 @@ This repository showcases selected projects in **Business Analysis, Data Visuali
 Interactive dashboard tracking **revenue, cost, and profitability** KPIs.  
 **Skills:** Power BI, DAX, Data Modeling, Visualization  
 **Outcome:** Improved visibility of financial performance and faster decision-making.  
-**Folder:** [/Power BI Projects](./Power%20BI%20Projects) • **Live Demo:** [Open Dashboard](<PASTE_POWER_BI_LINK>)
+**Folder:** [/Power BI Projects](./Power%20BI%20Projects) • **Live Demo:** [Open Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYTJkMjFmMGQtOWZjNC00MzEyLTk1ZjUtN2Q5NmQxMGJjY2E4IiwidCI6IjJhNTQzZDQ1LWE5NzItNDQ3NC05ZDUzLWRjZjFhOTdlMTYyMyIsImMiOjl9)
 
 ### 2) Process Automation & Reporting — Excel (Power Query & Macros)
 Automated monthly reporting workflows integrating **Power Query** and **VBA**.  
 **Skills:** Excel Automation, VBA, Power Query  
 **Outcome:** **~38%** reduction in manual reporting time; improved accuracy and timeliness.  
-**Folder:** [/Excel Automation](./Excel%20Automation) • **Live Demo:** [Open Dashboard](<PASTE_INVENTORY_LINK>)
+**Folder:** [/Excel Automation](./Excel%20Automation) • **Live Demo:** [Open Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYThjNmUyNzgtZDkyMy00NzMzLWE1ZjMtYTM5ZDc2YmM5ZWUxIiwidCI6IjJhNTQzZDQ1LWE5NzItNDQ3NC05ZDUzLWRjZjFhOTdlMTYyMyIsImMiOjl9)
 
 ### 3) Business Data Analytics & Reporting Automation — Python + Excel
 Python automation to analyze structured Excel datasets (clients, prices, delivery dates) and compute KPIs.  
