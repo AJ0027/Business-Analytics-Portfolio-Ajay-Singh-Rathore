@@ -5,7 +5,7 @@ This repository showcases selected projects in **Business Analysis, Data Visuali
 
 ---
 
-## 🔹 Projects Overview
+## Projects Overview
 
 ### 1) Financial & Operational KPI Dashboard — Power BI
 Interactive dashboard tracking **revenue, cost, and profitability** KPIs.  
@@ -27,14 +27,14 @@ Python automation to analyze structured Excel datasets (clients, prices, deliver
 
 ---
 
-## 🛠️ Tools & Skills
+##  Tools & Skills
 - **Power BI:** Dashboard design, DAX, data modeling, storytelling  
 - **Excel:** Power Query, VBA/Macros, process optimization  
-- **Python:** `openpyxl`, `pandas`, `datetime`, automation scripts  
+- **Python:** `openpyxl`, `Pandas`, `datetime`, automation scripts  
 - **Core Competencies:** Business Analysis, Data Analytics, Strategic Reporting
 
 ---
 
-## 📬 Connect
+##  Connect
 **LinkedIn:** [linkedin.com/in/ajay-singh-rathore-248a42266](https://www.linkedin.com/in/ajay-singh-rathore-248a42266)  
 **Email:** asrathore2726@gmail.com
